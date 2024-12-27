@@ -3,10 +3,9 @@ from TTS.api import TTS
 
 class TTSBackend:
     def __init__(self):
-        self.tts_instances = {}  # Cache loaded models
+        self.tts_instances = {}  # cache loaded models
 
-    def generate_audio(self, text, output_audio_path, model_name):
-        # Expand ~ to the user's home directory
+    def generate_audio(self, text, output_audio_path, model_name, speaker=None):
         output_audio_path = os.path.expanduser(output_audio_path)
 
         if model_name not in self.tts_instances:
@@ -14,5 +13,5 @@ class TTSBackend:
             self.tts_instances[model_name] = TTS(model_name=model_name)
         tts = self.tts_instances[model_name]
         print("Generating audio...")
-        tts.tts_to_file(text=text, file_path=output_audio_path)
+        tts.tts_to_file(text=text, file_path=output_audio_path, speaker=speaker)
         print(f"Audio saved to: {output_audio_path}")
