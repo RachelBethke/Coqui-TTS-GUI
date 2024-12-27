@@ -7,6 +7,7 @@ This project is built using [Coqui TTS](https://github.com/coqui-ai/TTS), an ope
 
 For more information about Coqui TTS, visit their [GitHub repository](https://github.com/coqui-ai/TTS) or [official website](https://coqui.ai/).
 
+Unfortunately, I am running on MacOS, so this is using CPU instead of GPU and therefore runs a but slower.
 
 ## Licensing
 This project is licensed under the **Mozilla Public License 2.0 (MPL-2.0)**. 

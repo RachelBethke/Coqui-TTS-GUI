@@ -1,2 +1,4 @@
 TTS
 torch
+PyQt5
+espeak
